@@ -1,20 +1,38 @@
 import React from 'react'
-import {Image, View, Text, StyleSheet} from 'react-native'
-import {scaleHorizontalSize, scaleVerticalSize} from '../utils/ScaleProcessor'
+import {
+  Image,
+  View,
+  Text,
+  StyleSheet
+} from 'react-native'
+
+import {
+  scaleHorizontalSize,
+  scaleVerticalSize
+} from '../utils/ScaleProcessor'
 
 export default class DetailProductScreen extends React.Component {
   render() {
     const product = this.props.navigation.getParam('product', {})
 
     return (
-      <View style={[styles.detailContainerView, styles.detailContainerContentPositioning]}>
+      <View style={[ styles.detailContainerView, styles.detailContainerContentPositioning ]}>
         <Image
           resizeMode='contain'
-          source={{uri: product.image_url}}
-          style={[styles.detailImageSize]}/>
-        <Text style={[styles.detailTitleTextSize, styles.detailTextPosition]}>{product.name}</Text>
-        <Text style={[styles.detailPriceTextSize, styles.detailTextPosition]}>{product.price}</Text>
-        <Text style={[styles.detailDescriptionTextSize, styles.detailTextPosition]}>{product.description}</Text>
+          source={{ uri: product.image_url }}
+          style={ styles.detailImageSize }
+        />
+        <Text style={[ styles.detailTitleTextSize, styles.detailTextPosition ]}>
+          { product.name }
+        </Text>
+
+        <Text style={[ styles.detailPriceTextSize, styles.detailTextPosition ]}>
+          { product.price }
+        </Text>
+
+        <Text style={[ styles.detailDescriptionTextSize, styles.detailTextPosition ]}>
+          { product.description }
+        </Text>
       </View>
     )
   }

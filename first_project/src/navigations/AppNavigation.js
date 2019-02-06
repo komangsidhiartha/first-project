@@ -1,4 +1,8 @@
-import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
+import {
+  createBottomTabNavigator,
+  createStackNavigator
+} from 'react-navigation'
+
 import ListProductScreen from '../screens/ListProductScreen'
 import DetailProductScreen from '../screens/DetailProductScreen'
 
