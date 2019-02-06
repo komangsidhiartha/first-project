@@ -1,20 +1,31 @@
 import React from 'react'
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import {scaleHorizontalSize, scaleVerticalSize} from '../utils/ScaleProcessor'
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
+} from 'react-native'
+
+import {
+  scaleHorizontalSize,
+  scaleVerticalSize
+} from '../utils/ScaleProcessor'
 
 export default class ProductItem extends React.PureComponent {
   render() {
     const { item } = this.props
 
     return (
-      <TouchableOpacity onPress={this._onPress}>
-        <View style={[styles.itemContainerView, styles.itemContainerContentPositioning]}>
+      <TouchableOpacity onPress={ this._onPress }>
+        <View style={[ styles.itemContainerView, styles.itemContainerContentPositioning ]}>
           <Image
             resizeMode='contain'
-            source={{uri: item.image_url}}
-            style={[styles.itemImageSize]}/>
+            source={{ uri: item.image_url }}
+            style={[ styles.itemImageSize ]}
+          />
 
-          <Text style={[styles.itemTextSize, styles.itemTextPosition]}>{item.name}</Text>
+          <Text style={[ styles.itemTextSize, styles.itemTextPosition] }>{ item.name }</Text>
         </View>
       </TouchableOpacity>
     )

@@ -10,7 +10,8 @@ export default class FlatListFacade extends React.PureComponent {
       <FlatList
         data={data}
         keyExtractor={this._keyExtractor}
-        renderItem={this._renderItem}/>
+        renderItem={this._renderItem}
+      />
     )
   }
 
@@ -20,8 +21,9 @@ export default class FlatListFacade extends React.PureComponent {
     const { onPressItem } = this.props
     return (
       <ProductItem
-        item={item.item}
-        onPress={onPressItem}/>
+        item={ item.item }
+        onPress={ onPressItem }
+      />
     )
   }
 }
