@@ -19,3 +19,14 @@ This project was React Native Sample code, created in attempt to learn React Nat
 - Jest: 23.6.0
 - metro-react-native-babel-preset: 0.49.1
 - react-test-renderer: 16.6.1
+
+### Test Environtment:
+- iOS: 
+    - Device: iPhone X Simulator
+    - OS version: 12.1
+    - Execute command: react-native run-ios
+    
+- Android:
+    - Device: Pixel 2 XL Emulator
+    - OS Version: Android 8.1 (Oreo)
+    - Execute command: react-native run-android
