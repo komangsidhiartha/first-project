@@ -1,5 +1,9 @@
 import React from 'react'
-import { ActivityIndicator, View } from 'react-native'
+import {
+  ActivityIndicator,
+  View
+} from 'react-native'
+
 import ProductApi from '../networks/ProductApi'
 import FlatList from '../viewItems/FlatListFacade'
 
