@@ -11,9 +11,11 @@ import {
   scaleVerticalSize
 } from '../utils/ScaleProcessor'
 
-export default class DetailProductScreen extends React.Component {
+import { connect } from 'react-redux'
+
+class DetailProductScreen extends React.Component {
   render() {
-    const product = this.props.navigation.getParam('product', {})
+    const { product } = this.props
 
     return (
       <View style={[ styles.detailContainerView, styles.detailContainerContentPositioning ]}>
@@ -73,3 +75,11 @@ const styles = StyleSheet.create({
     marginTop: scaleVerticalSize(4)
   }
 })
+
+const mapsStateToProps = (state) => {
+  return {
+    product: state.product.selectedProduct
+  }
+}
+
+export default connect(mapsStateToProps)(DetailProductScreen)
