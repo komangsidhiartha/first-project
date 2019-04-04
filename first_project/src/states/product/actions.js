@@ -1,5 +1,10 @@
 import ProductApi from '../../networks/ProductApi'
-import {IS_ERROR, IS_LOADING, IS_SUCCESS, SELECT_PRODUCT} from './constant'
+import {
+  IS_ERROR,
+  IS_LOADING,
+  IS_SUCCESS,
+  SELECT_PRODUCT
+} from './constant'
 
 export const loadHats = (dispatch) => {
   ProductApi.getHatList((response, error) => {
