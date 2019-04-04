@@ -13,6 +13,8 @@ This project was React Native Sample code, created in attempt to learn React Nat
 - React: 16.6.1
 - React Native: 0.57.5
 - React Navigation: 2.18.2
+- Redux: 4.0.1
+- React Redux: 6.0.1
 
 ### Development Library:
 - Babel Jest: 23.6.0
