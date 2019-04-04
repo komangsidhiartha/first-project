@@ -11,7 +11,7 @@ import {
   scaleVerticalSize
 } from '../utils/ScaleProcessor'
 
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
 class DetailProductScreen extends React.Component {
   render() {

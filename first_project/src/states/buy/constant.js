@@ -1,3 +1,0 @@
-export const BUY_IN_PROGRESS = 'BUY_IN_PROGRESS'
-export const BUY_IS_SUCCESS = 'BUY_IS_SUCCESS'
-export const BUY_IS_ERROR = 'BUY_IS_ERROR'

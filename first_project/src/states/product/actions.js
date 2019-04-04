@@ -3,7 +3,7 @@ import {IS_ERROR, IS_LOADING, IS_SUCCESS, SELECT_PRODUCT} from './constant'
 
 export const loadHats = (dispatch) => {
   ProductApi.getHatList((response, error) => {
-    if (error || !response.status) {
+    if (error) {
       dispatch(isError(error))
       return
     }
@@ -37,7 +37,7 @@ const isError = (error) => {
 
 export const loadShirt = (dispatch) => {
   ProductApi.getShirtList((response, error) => {
-    if (error || !response.status) {
+    if (error) {
       dispatch(isError(error))
       return
     }
@@ -57,7 +57,7 @@ export const loadShirt = (dispatch) => {
 
 export const loadJeans = (dispatch) => {
   ProductApi.getJeansList((response, error) => {
-    if (error || !response.status) {
+    if (error) {
       dispatch(isError(error))
       return
     }

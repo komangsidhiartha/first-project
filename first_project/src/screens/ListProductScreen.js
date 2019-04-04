@@ -5,10 +5,14 @@ import {
 } from 'react-native'
 
 import FlatList from '../viewItems/FlatListFacade'
-import {loadHats, loadJeans, loadShirt, selectProduct} from '../states/product/actions'
-import {connect} from 'react-redux'
 
-// const apis = ["dispatchLoadHats", "dispatchLoadShirt", "dispatchLoadJeans"]
+import {
+  loadHats,
+  loadJeans,
+  loadShirt,
+  selectProduct
+} from '../states/product/actions'
+import { connect } from 'react-redux'
 
 class ListProductScreen extends React.Component {
   constructor(props) {
@@ -49,7 +53,6 @@ class ListProductScreen extends React.Component {
 
   loadProductList = () => {
     const index = this.generatePageIndex()
-    // const method = apis[index]
 
     switch (index) {
       case 0: {
