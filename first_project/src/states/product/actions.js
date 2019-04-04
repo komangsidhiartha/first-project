@@ -1,6 +1,5 @@
 import ProductApi from '../../networks/ProductApi'
-import {IS_ERROR, IS_LOADING, IS_SUCCESS} from './constant'
-
+import {IS_ERROR, IS_LOADING, IS_SUCCESS, SELECT_PRODUCT} from './constant'
 
 export const loadHats = (dispatch) => {
   ProductApi.getHatList((response, error) => {
@@ -73,5 +72,12 @@ export const loadJeans = (dispatch) => {
 
   return {
     type: IS_LOADING
+  }
+}
+
+export const selectProduct = (product) => {
+  return {
+    type: SELECT_PRODUCT,
+    selectedProduct: product
   }
 }

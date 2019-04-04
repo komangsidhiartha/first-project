@@ -5,7 +5,7 @@ import {
 } from 'react-native'
 
 import FlatList from '../viewItems/FlatListFacade'
-import {loadHats, loadJeans, loadShirt} from '../states/product/actions'
+import {loadHats, loadJeans, loadShirt, selectProduct} from '../states/product/actions'
 import {connect} from 'react-redux'
 
 // const apis = ["dispatchLoadHats", "dispatchLoadShirt", "dispatchLoadJeans"]
@@ -96,7 +96,8 @@ class ListProductScreen extends React.Component {
   }
 
   _onItemClick = (item) => {
-    this.props.navigation.navigate("Detail", { product: item })
+    this.props.dispatchSelectProduct(item)
+    this.props.navigation.navigate("Detail")
   }
 }
 
@@ -113,7 +114,8 @@ const mapsDispatchToProps = (dispatch) => {
   return {
     dispatchLoadHats: () => dispatch(loadHats(dispatch)),
     dispatchLoadShirt: () => dispatch(loadShirt(dispatch)),
-    dispatchLoadJeans: () => dispatch(loadJeans(dispatch))
+    dispatchLoadJeans: () => dispatch(loadJeans(dispatch)),
+    dispatchSelectProduct: (product) => dispatch(selectProduct(product))
   }
 }
 

@@ -1,11 +1,12 @@
 import {
   IS_ERROR,
   IS_LOADING,
-  IS_SUCCESS
+  IS_SUCCESS, SELECT_PRODUCT
 } from './constant'
 
 const INITIAL_STATE = {
   products: [],
+  selectedProduct: {},
   isLoading: false,
   isError: false,
   errorReason: ''
@@ -39,10 +40,16 @@ const productReducer = (state = INITIAL_STATE, action) => {
       }
     }
 
+    case SELECT_PRODUCT: {
+      return {
+        ...state,
+        selectedProduct: action.selectedProduct
+      }
+    }
+
     default:
       return state
   }
-};
-
+}
 
 export default productReducer
